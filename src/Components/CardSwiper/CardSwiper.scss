@@ -1,0 +1,103 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 400px;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: #bce8e4;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #ffccf8;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: #dcd3f2;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: #d4e8ff;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: #cce6e0;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: #c7ffc4;
+}
+
+//覆蓋箭頭樣式
+.swiper-button-next,
+.swiper-button-prev {
+  top: 30px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: -130px;
+  left: auto;
+  height: 100%;
+  width: 70%;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: -130px;
+  right: auto;
+  height: 100%;
+  width: 70%;
+}
+
+.swiper-slide-active {
+  color: #000;
+}

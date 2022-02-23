@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './style/_reset.scss';
+import VocabularyApp from './AppContainer/VocabularyApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <VocabularyApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
