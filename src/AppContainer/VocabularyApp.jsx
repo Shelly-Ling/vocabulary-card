@@ -1,6 +1,9 @@
 import { useState, useRef } from 'react';
 import CardSwiper from '../Components/CardSwiper/CardSwiper'
 import './VocabularyApp.scss';
+import UploadIcon from '../Images/upload-file.svg';
+
+
 
 function App() {
 	const [vocabularyData, setVocabularyData] = useState([])
@@ -57,19 +60,29 @@ function App() {
 
 	return (
 		<div className="App">
-			<input
-				ref={inputElement}
-				component="label"
-				type={"file"}
-				onChange={onFileUpload} 
-			/>
+			<label htmlFor="input-upload">
+				<img className="icon-upload hover-pointer" src={UploadIcon} alt="上傳資料圖示" />
+				<p>請上傳檔案</p>
+				<input
+					id="input-upload"
+					ref={inputElement}
+					type={"file"}
+					style={{ display: "none" }}
+					onChange={onFileUpload} 
+				/>
+				
+			</label>
+			
 			
 			{
 				vocabularyData.map((item,index)=> (
 					<div key={item.vocabulary + index}>{item.vocabulary}</div>
 				))
 			}
-			<CardSwiper data={vocabularyData} />
+			<CardSwiper
+				setStyleClass={`${vocabularyData.length ? "" : "d-none"}`} 
+				data={vocabularyData}
+			/>
 		</div>
 	);
 }

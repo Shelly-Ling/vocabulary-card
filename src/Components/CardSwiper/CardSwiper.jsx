@@ -12,7 +12,10 @@ import "./CardSwiper.scss";
 // import required modules
 import { EffectCards, Navigation } from "swiper";
 
-export default function CardSwiper({data}) {
+export default function CardSwiper({
+	data= [],
+	setStyleClass= ""
+}) {
   console.log('data',data)
 
   return (
@@ -21,7 +24,7 @@ export default function CardSwiper({data}) {
 				effect={"cards"}
 				grabCursor={true}
 				modules={[EffectCards, Navigation]}
-				className="mySwiper"
+				className={`mySwiper ${setStyleClass}`}
 				loop={true}
 				navigation={true}
 			>
