@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './style/_reset.scss';
 import VocabularyApp from './AppContainer/VocabularyApp';
 import reportWebVitals from './reportWebVitals';
+// import ReactGA from 'react-ga';
+
+// ReactGA.initialize('追蹤ID');
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <React.StrictMode>

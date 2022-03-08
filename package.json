@@ -1,6 +1,7 @@
 {
   "name": "vocabulary-card",
   "version": "0.1.0",
+  "homepage": "https://shelly-ling.github.io/vocabulary-card",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
