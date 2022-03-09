@@ -5,7 +5,7 @@ import VocabularyApp from './AppContainer/VocabularyApp';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('306395215');
+ReactGA.initialize('G-KRFV6QNNXY');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
