@@ -6,7 +6,34 @@ import UploadIcon from '../Images/upload-file.svg';
 
 
 function App() {
-	const [vocabularyData, setVocabularyData] = useState([])
+	const exampleSheetDownloadUrl = "https://docs.google.com/spreadsheets/d/1Sdj3BPDsu9dEievt0GAqsI341j_N3V0VqSncmYJKEsQ/edit?usp=sharing"
+
+	const [vocabularyData, setVocabularyData] = useState([
+		{
+			adverbTenseAndTranslation: "",
+			antonyms: "",
+			exampleSentences: "",
+			note: "",
+			nounTenseAndTranslation: "",
+			prefixOrRootAndMeaning: "a/an: without",
+			synonyms: "",
+			translation: "adj. 非典型的",
+			verbTenseAndTranslation: "",
+			vocabulary: "卡片測試"
+		},
+		{
+			adverbTenseAndTranslation: "",
+			antonyms: "",
+			exampleSentences: "",
+			note: "",
+			nounTenseAndTranslation: "",
+			prefixOrRootAndMeaning: "a/an: without",
+			synonyms: "",
+			translation: "adj. 非典型的",
+			verbTenseAndTranslation: "",
+			vocabulary: "卡片測試2"
+		}
+	])
 	const inputElement = useRef(null);
 
 	const onFileUpload = event => {
@@ -72,6 +99,8 @@ function App() {
 				/>
 				
 			</label>
+			
+			<a href={exampleSheetDownloadUrl} target="_blank" title="表單下載" rel="noreferrer">表單下載</a>
 			
 			
 			{

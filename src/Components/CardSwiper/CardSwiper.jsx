@@ -25,13 +25,13 @@ export default function CardSwiper({
 				grabCursor={true}
 				modules={[EffectCards, Navigation]}
 				className={`mySwiper ${setStyleClass}`}
-				loop={true}
-				navigation={true}
+				loop={data.length > 1}
+				navigation={data.length > 1}
 			>
 				{
 					data.map((item,index)=>(
 						<SwiperSlide key={item.vocabulary + index}>
-						{item?.vocabulary}            
+							{item?.vocabulary}            
 						</SwiperSlide>
 					))
 				}
