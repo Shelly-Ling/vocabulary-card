@@ -1,37 +1,38 @@
-import React from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-import "swiper/css/navigation";
 import "./CardSwiper.scss";
-
-
-// import required modules
-import { EffectCards, Navigation } from "swiper";
+import { useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards, Navigation, Pagination } from "swiper";
+import VocabularyCard from "../VocabularyCard/VocabularyCard";
 
 export default function CardSwiper({
-	data= [],
+	data = [],
 	setStyleClass= ""
 }) {
-  console.log('data',data)
+	const [ cardSwitch, setCardSwitch ] = useState(false)
 
-  return (
+	return (
 		<>
 			<Swiper
+				pagination={{
+				type: "fraction",
+				}}
 				effect={"cards"}
-				grabCursor={true}
-				modules={[EffectCards, Navigation]}
+				modules={[EffectCards, Navigation, Pagination]}
 				className={`mySwiper ${setStyleClass}`}
 				loop={data.length > 1}
 				navigation={data.length > 1}
+				onSlideChange={(e)=>{
+					setCardSwitch(!cardSwitch)
+					// console.log('e.realIndex',e.realIndex)
+				}}
 			>
 				{
 					data.map((item,index)=>(
 						<SwiperSlide key={item.vocabulary + index}>
-							{item?.vocabulary}            
+							<VocabularyCard 
+								cardData={item} 
+								cardSwitch={cardSwitch}
+							/>
 						</SwiperSlide>
 					))
 				}

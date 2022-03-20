@@ -3,36 +3,36 @@ import CardSwiper from '../Components/CardSwiper/CardSwiper'
 import './VocabularyApp.scss';
 import UploadIcon from '../Images/upload-file.svg';
 
-
-
 function App() {
 	const exampleSheetDownloadUrl = "https://docs.google.com/spreadsheets/d/1Sdj3BPDsu9dEievt0GAqsI341j_N3V0VqSncmYJKEsQ/edit?usp=sharing"
 
 	const [vocabularyData, setVocabularyData] = useState([
 		{
-			adverbTenseAndTranslation: "",
-			antonyms: "",
-			exampleSentences: "",
-			note: "",
-			nounTenseAndTranslation: "",
+			adverbTenseAndTranslation: "adverbTenseAndTranslation",
+			antonyms: "antonyms",
+			exampleSentences: "exampleSentences exampleSentences exampleSentences exampleSentences exampleSentences",
+			note: "note",
+			nounTenseAndTranslation: "nounTenseAndTranslation",
 			prefixOrRootAndMeaning: "a/an: without",
-			synonyms: "",
+			synonyms: "synonyms",
 			translation: "adj. 非典型的",
-			verbTenseAndTranslation: "",
-			vocabulary: "卡片測試"
+			verbTenseAndTranslation: "verbTenseAndTranslation",
+			vocabulary: "vocabularyTest",
+			tense: "answer 時態"
 		},
 		{
-			adverbTenseAndTranslation: "",
-			antonyms: "",
-			exampleSentences: "",
-			note: "",
-			nounTenseAndTranslation: "",
-			prefixOrRootAndMeaning: "a/an: without",
-			synonyms: "",
-			translation: "adj. 非典型的",
-			verbTenseAndTranslation: "",
-			vocabulary: "卡片測試2"
-		}
+			adverbTenseAndTranslation: "answer 副詞時態 與 翻譯",
+			antonyms: "answer 反義詞",
+			exampleSentences: "answer 例句",
+			note: "answer 其他備註",
+			nounTenseAndTranslation: "answer 名詞時態 與 翻譯",
+			prefixOrRootAndMeaning: "answer 字首/字根 與 意義 a/an: without",
+			synonyms: "answer 近義詞",
+			translation: "answer adj. 非典型的",
+			verbTenseAndTranslation: "answer 動詞時態 與 翻譯",
+			vocabulary: "vocabularyTest",
+			tense: "answer 時態"
+		},
 	])
 	const inputElement = useRef(null);
 
@@ -61,27 +61,28 @@ function App() {
 	}
 
 	function csvToArray(str, delimiter = ",") {
-		// 假使從表單第一行取 header 
+		// 從表單第一行取 header 可以這樣寫
 		// const header_cols = str.slice(0, str.indexOf("\n")).split(delimiter);
-		// console.log('header_cols',header_cols)
-		const header_cols = ['vocabulary', 'translation', 'verbTenseAndTranslation', 'nounTenseAndTranslation', 'adverbTenseAndTranslation', 'exampleSentences', 'synonyms', 'antonyms', 'prefixOrRootAndMeaning', 'note']
-		
-		const row_data = str.slice(str.indexOf("\n") + 1).split("\n");
+		const header_cols = ['vocabulary','tense', 'translation', 'verbTenseAndTranslation', 'nounTenseAndTranslation', 'adverbTenseAndTranslation', 'exampleSentences', 'synonyms', 'antonyms', 'prefixOrRootAndMeaning', 'note']
 
+		//依資料組成陣列
+		const row_data = str.slice(str.indexOf("\n") + 1).split("\n");
+		
+		//map 陣列處理成 json
 		const arr = row_data.map(function (row) {
-			// console.log('row >>>>>>>>>',row)
 			const values = row.split(delimiter);
-			// console.log('values',values)
+			
 			const el = header_cols.reduce(function (object, header, index) {
 				const keyName = header.trim().replace(/\r/,"")
 				object[keyName] = values[index].trim().replace(/\r/,"");
 				
 				return object;
 			}, {});
+
 			return el;
 		});
 
-		// return the array
+		// return the array 篩選掉沒單字資料的
 		setVocabularyData(arr.filter((item)=> item.vocabulary))
 	}
 

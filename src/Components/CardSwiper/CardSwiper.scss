@@ -1,3 +1,8 @@
+@import "swiper/css";
+@import "swiper/css/effect-cards";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
 #app {
   height: 100%;
 }
@@ -38,8 +43,8 @@ body {
 }
 
 .swiper {
-  width: 400px;
-  height: 500px;
+  width: 85vw;
+  min-height: 500px;
 }
 
 .swiper-slide {
@@ -50,54 +55,60 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
+  height: unset;
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: #bce8e4;
+  background-color: #b3d2e3;
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color: #ffccf8;
+  background-color: #74849c;
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: #dcd3f2;
+  background-color: #7494b4;
 }
 
 .swiper-slide:nth-child(4n) {
-  background-color: #d4e8ff;
+  background-color: #4175a5;
 }
 
 .swiper-slide:nth-child(5n) {
-  background-color: #cce6e0;
+  background-color: #748494;
 }
 
 .swiper-slide:nth-child(6n) {
-  background-color: #c7ffc4;
+  background-color: #628292;
 }
 
 //覆蓋箭頭樣式
 .swiper-button-next,
 .swiper-button-prev {
-  top: 30px;
+  top: 50%;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: -130px;
+  right: 2vw;
   left: auto;
-  height: 100%;
-  width: 70%;
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: -130px;
+  left: 2vw;
   right: auto;
-  height: 100%;
-  width: 70%;
 }
 
 .swiper-slide-active {
   color: #000;
+}
+
+// 設定當前頁面顯示位置
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -30px;
 }
