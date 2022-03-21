@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/vocabulary-card/static/css/main.9db5d08c.css",
-    "main.js": "/vocabulary-card/static/js/main.2566f2ae.js",
+    "main.css": "/vocabulary-card/static/css/main.d71a92fc.css",
+    "main.js": "/vocabulary-card/static/js/main.491a25f1.js",
     "static/js/787.b6b1ea87.chunk.js": "/vocabulary-card/static/js/787.b6b1ea87.chunk.js",
     "static/media/upload-file.svg": "/vocabulary-card/static/media/upload-file.05f219ceb84dd4c256be4f7c98a9b9c9.svg",
     "index.html": "/vocabulary-card/index.html",
-    "main.9db5d08c.css.map": "/vocabulary-card/static/css/main.9db5d08c.css.map",
-    "main.2566f2ae.js.map": "/vocabulary-card/static/js/main.2566f2ae.js.map",
+    "main.d71a92fc.css.map": "/vocabulary-card/static/css/main.d71a92fc.css.map",
+    "main.491a25f1.js.map": "/vocabulary-card/static/js/main.491a25f1.js.map",
     "787.b6b1ea87.chunk.js.map": "/vocabulary-card/static/js/787.b6b1ea87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9db5d08c.css",
-    "static/js/main.2566f2ae.js"
+    "static/css/main.d71a92fc.css",
+    "static/js/main.491a25f1.js"
   ]
 }
