@@ -107,7 +107,7 @@ export default function VocabularyCard({
     }
     
     return(
-        <div className="px-20">
+        <div className="col-12 py-20">
                 { showAllAnswer 
                     ? (
                         <div className="btn text-center cursor-pointer" onClick={() => setShowAllAnswer(false)}>
@@ -119,20 +119,25 @@ export default function VocabularyCard({
                         </div>
                     )
                 }
-            <div className="p-10 text-center">
+            <div className="vocabulary py-20 text-center">
                 {vocabulary}
             </div>
             {
                 Object.entries(ENUM_CARD_DATA).map(([key,value]) => (
-                    <div key={`${key}-${value.title}`} className="p-10 text-center">
-                        <FlipCard 
-                            title={value.title}
-                            data={value.data}
-                            showAllAnswer={showAllAnswer}
-                            cardSwitch={cardSwitch}
-                        />
-                    </div>
-                ))
+                        value.data
+                        ? (       
+                            <div key={`${key}-${value.title}`} className="p-10 text-center">
+                                <FlipCard 
+                                    title={value.title}
+                                    data={value.data}
+                                    showAllAnswer={showAllAnswer}
+                                    cardSwitch={cardSwitch}
+                                />
+                            </div>
+                        )
+                        : null
+                    )
+                )
             }
         </div>
     )

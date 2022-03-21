@@ -14,7 +14,7 @@
   margin: 10px;
 }
 
-.px-20 {
+.py-20 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -28,8 +28,8 @@
 }
 
 .answer-style {
-  background-color: aliceblue;
-  border-radius: 16px;
+  background-color: #cee5fc;
+  border-radius: 8px;
 }
 
 .cursor-pointer {
@@ -47,9 +47,17 @@
 }
 
 .btn {
-  display: inline;
-  margin: 5px;
-  background: #f0f8ff;
+  width: 70%;
+  margin: 0px auto 15px auto;
+  background: #cee5fc;
   padding: 5px;
   border-radius: 8px;
+}
+
+.vocabulary {
+  background-color: #cee5fc;
+}
+
+.col-12 {
+  width: 100%;
 }
