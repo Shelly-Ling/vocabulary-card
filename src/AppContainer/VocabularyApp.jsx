@@ -1,9 +1,9 @@
 import { useState, useRef } from 'react';
 import CardSwiper from '../Components/CardSwiper/CardSwiper'
 import './VocabularyApp.scss';
-import UploadIcon from '../Images/upload-file.svg';
 
 function App() {
+	// 表單下載
 	const exampleSheetDownloadUrl = "https://docs.google.com/spreadsheets/d/1Sdj3BPDsu9dEievt0GAqsI341j_N3V0VqSncmYJKEsQ/edit?usp=sharing"
 
 	const [vocabularyData, setVocabularyData] = useState([
@@ -13,6 +13,7 @@ function App() {
 			exampleSentences: "exampleSentences exampleSentences exampleSentences exampleSentences exampleSentences",
 			note: "note",
 			nounTenseAndTranslation: "nounTenseAndTranslation",
+			adjectiveTenseAndTranslation: "adjectiveTenseAndTranslation",
 			prefixOrRootAndMeaning: "a/an: without",
 			synonyms: "synonyms",
 			translation: "adj. 非典型的",
@@ -26,6 +27,7 @@ function App() {
 			exampleSentences: "answer 例句",
 			note: "answer 其他備註",
 			nounTenseAndTranslation: "answer 名詞時態 與 翻譯",
+			adjectiveTenseAndTranslation: "adjectiveTenseAndTranslation",
 			prefixOrRootAndMeaning: "answer 字首/字根 與 意義 a/an: without",
 			synonyms: "answer 近義詞",
 			translation: "answer adj. 非典型的",
@@ -63,7 +65,7 @@ function App() {
 	function csvToArray(str, delimiter = ",") {
 		// 從表單第一行取 header 可以這樣寫
 		// const header_cols = str.slice(0, str.indexOf("\n")).split(delimiter);
-		const header_cols = ['vocabulary','tense', 'translation', 'verbTenseAndTranslation', 'nounTenseAndTranslation', 'adverbTenseAndTranslation', 'exampleSentences', 'synonyms', 'antonyms', 'prefixOrRootAndMeaning', 'note']
+		const header_cols = ['vocabulary','tense', 'translation', 'verbTenseAndTranslation', 'nounTenseAndTranslation','adjectiveTenseAndTranslation', 'adverbTenseAndTranslation', 'exampleSentences', 'synonyms', 'antonyms', 'prefixOrRootAndMeaning', 'note']
 
 		//依資料組成陣列
 		const row_data = str.slice(str.indexOf("\n") + 1).split("\n");
@@ -88,27 +90,21 @@ function App() {
 
 	return (
 		<div className="App">
-			<label htmlFor="input-upload">
-				<img className="icon-upload hover-pointer" src={UploadIcon} alt="上傳資料圖示" />
-				<p>請上傳檔案</p>
-				<input
-					id="input-upload"
-					ref={inputElement}
-					type={"file"}
-					style={{ display: "none" }}
-					onChange={onFileUpload} 
-				/>
-				
-			</label>
-			
-			<a href={exampleSheetDownloadUrl} target="_blank" title="表單下載" rel="noreferrer">表單下載</a>
-			
-			
-			{
-				vocabularyData.map((item,index)=> (
-					<div key={item.vocabulary + index}>{item.vocabulary}</div>
-				))
-			}
+			<div className="btn_wrapper mt-10">
+				<div className="btn">使用說明</div>
+				<div className="btn">
+					<label htmlFor="input-upload">上傳檔案
+						<input
+							id="input-upload"
+							ref={inputElement}
+							type={"file"}
+							style={{ display: "none" }}
+							onChange={onFileUpload} 
+						/>
+					</label>
+				</div>
+				<a className="btn" href={exampleSheetDownloadUrl} target="_blank" title="表單下載" rel="noreferrer">表單下載</a>
+			</div>
 			<CardSwiper
 				setStyleClass={`${vocabularyData.length ? "" : "d-none"}`} 
 				data={vocabularyData}

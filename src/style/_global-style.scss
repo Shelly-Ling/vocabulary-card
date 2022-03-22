@@ -2,6 +2,65 @@
   display: none;
 }
 
-.hover-pointer {
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+//按鈕
+.btn {
+  text-align: center;
+  display: block;
+  margin: 0px auto 15px auto;
+  background: #cee5fc;
+  padding: 10px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
   cursor: pointer;
 }

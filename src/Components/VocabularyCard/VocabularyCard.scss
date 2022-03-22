@@ -1,57 +1,18 @@
-.p-5 {
-  padding: 5px;
-}
-
-.p-10 {
-  padding: 10px;
-}
-
-.m-10 {
-  margin: 10px;
-}
-
-.m-10 {
-  margin: 10px;
-}
-
-.py-20 {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
 .answer-style {
   background-color: #cee5fc;
   border-radius: 8px;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
+@media (min-width: 768px) {
+  .title {
+    white-space: nowrap;
+  }
 
-.flip-card-style {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  white-space: nowrap;
-}
-
-.btn {
-  width: 70%;
-  margin: 0px auto 15px auto;
-  background: #cee5fc;
-  padding: 5px;
-  border-radius: 8px;
+  .flip-card-style {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .vocabulary {

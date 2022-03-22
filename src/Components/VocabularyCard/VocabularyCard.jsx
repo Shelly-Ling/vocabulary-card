@@ -108,16 +108,10 @@ export default function VocabularyCard({
     
     return(
         <div className="col-12 py-20">
-                { showAllAnswer 
-                    ? (
-                        <div className="btn text-center cursor-pointer" onClick={() => setShowAllAnswer(false)}>
-                            隱藏全部答案
-                        </div>
-                    ):(
-                        <div className="btn text-center cursor-pointer" onClick={() => setShowAllAnswer(true)}>
-                            顯示全部答案
-                        </div>
-                    )
+                {
+                    <div className="btn col-6 text-center cursor-pointer" onClick={() => setShowAllAnswer(!showAllAnswer)}>
+                        { showAllAnswer ? "隱藏全部答案" : "顯示全部答案" }
+                    </div>
                 }
             <div className="vocabulary py-20 text-center">
                 {vocabulary}

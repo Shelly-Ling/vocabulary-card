@@ -1,5 +1,12 @@
 @import "../style/global-style.scss";
 
-.icon-upload {
-  width: 100px;
+.btn_wrapper {
+  margin: 0 auto;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .btn_wrapper {
+    width: 700px;
+  }
 }

@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   border-radius: 18px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
   height: unset;
@@ -70,4 +70,13 @@
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: -30px;
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    width: 700px;
+  }
+  .swiper-slide {
+    font-size: 22px;
+  }
 }
