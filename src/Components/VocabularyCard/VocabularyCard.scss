@@ -1,23 +1,11 @@
-.answer-style {
-  background-color: #cee5fc;
+.title {
+  white-space: nowrap;
+}
+
+.flip-card-style {
   border-radius: 8px;
 }
 
-@media (min-width: 768px) {
-  .title {
-    white-space: nowrap;
-  }
-
-  .flip-card-style {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.vocabulary {
-  background-color: #cee5fc;
-}
 
 .col-12 {
   width: 100%;

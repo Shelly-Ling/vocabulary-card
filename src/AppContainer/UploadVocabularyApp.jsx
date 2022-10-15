@@ -2,11 +2,11 @@ import { useState, useRef } from 'react';
 import CardSwiper from '../Components/CardSwiper/CardSwiper'
 import './VocabularyApp.scss';
 
-function App() {
+function UploadVocabularyApp() {
 	// 表單下載
 	const exampleSheetDownloadUrl = "https://docs.google.com/spreadsheets/d/1Sdj3BPDsu9dEievt0GAqsI341j_N3V0VqSncmYJKEsQ/edit?usp=sharing"
 
-	const [vocabularyData, setVocabularyData] = useState([
+	const testData = [
 		{
 			adverbTenseAndTranslation: "adverbTenseAndTranslation",
 			antonyms: "antonyms",
@@ -35,7 +35,9 @@ function App() {
 			vocabulary: "vocabularyTest",
 			tense: "answer 時態"
 		},
-	])
+	]
+
+	const [vocabularyData, setVocabularyData] = useState(testData)
 	const inputElement = useRef(null);
 
 	const onFileUpload = event => {
@@ -113,4 +115,4 @@ function App() {
 	);
 }
 
-export default App;
+export default UploadVocabularyApp;

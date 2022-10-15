@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/_reset.scss';
-import VocabularyApp from './AppContainer/VocabularyApp';
+// import UploadVocabularyApp from './AppContainer/UploadVocabularyApp';
+import BaseVocabularyApp from './AppContainer/BaseVocabularyApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <VocabularyApp />
+    {/* <UploadVocabularyApp /> */}
+    <BaseVocabularyApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

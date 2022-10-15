@@ -23,12 +23,16 @@ export default function CardSwiper({
 				navigation={data.length > 1}
 				onSlideChange={(e)=>{
 					setCardSwitch(!cardSwitch)
-					// console.log('e.realIndex',e.realIndex)
 				}}
 			>
 				{
 					data.map((item,index)=>(
-						<SwiperSlide key={item.vocabulary + index}>
+						<SwiperSlide key={item.vocabulary + index}
+							style={{
+								background: "linear-gradient(#F3FFFA, #4CCFFF)",
+								color: "#323232"
+							}}
+						>
 							<VocabularyCard 
 								cardData={item} 
 								cardSwitch={cardSwitch}

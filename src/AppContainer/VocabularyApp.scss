@@ -10,3 +10,23 @@
     width: 700px;
   }
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+}
+.isVisible {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.section {
+  height: 100vh;
+}
+
+.box {
+  width: 100%;
+  height: 1000px;
+}
