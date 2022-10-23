@@ -1,7 +1,10 @@
 import { useState, useRef } from 'react';
-import CardSwiper from '../Components/CardSwiper/CardSwiper'
+import CardSwiper from '../Components/CardTypeComponents/CardSwiper/CardTypeVocabularyCard'
 import './VocabularyApp.scss';
 
+/**
+ * @description 有表單下載樣式的組件
+ */
 function UploadVocabularyApp() {
 	// 表單下載
 	const exampleSheetDownloadUrl = "https://docs.google.com/spreadsheets/d/1Sdj3BPDsu9dEievt0GAqsI341j_N3V0VqSncmYJKEsQ/edit?usp=sharing"

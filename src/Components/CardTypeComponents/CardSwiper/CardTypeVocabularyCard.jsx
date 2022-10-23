@@ -1,10 +1,10 @@
-import "./CardSwiper.scss";
-import { useState } from "react"
+import "./CardTypeVocabularyCard.scss";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Navigation, Pagination } from "swiper";
-import VocabularyCard from "../VocabularyCard/VocabularyCard";
+import VocabularyCard from "./VocabularyCard/VocabularyCard";
 
-export default function CardSwiper({
+export default function CardTypeSwiper({
 	data = [],
 	setStyleClass= ""
 }) {

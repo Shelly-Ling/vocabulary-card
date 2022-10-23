@@ -20,13 +20,13 @@ function FlipSection ({
         <>
             {title && children && (
                 <div
-                    className="flip-card-style text-center cursor-pointer py-10 m-10" 
+                    className="border-radius-8 text-center cursor-pointer py-10 m-10" 
                     onMouseEnter={() => setShowAnswer(true)}
                     onMouseLeave={() => setShowAnswer(false)}
                     style={showAnswer ? {backgroundColor: "#F2FCF6"} : {}}
                 >
                     {
-                        <div className="title p-5 p-bottom-10">{title}</div>
+                        <div className="white-space-nowrap p-5 p-bottom-10">{title}</div>
                     }
                     {
                         showAnswer && (                        

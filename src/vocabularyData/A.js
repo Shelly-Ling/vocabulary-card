@@ -1,36 +1,42 @@
 const LETTER_START_A = [
     {
         vocabulary: 'adapt',
-        spellingByTense: {
-            verb: {
+        spellingByTense: [
+            {
+                type: 'verb',
                 spelling: 'adapt',
                 meaning: '改編'
-            },
-        }
+            }
+        ]
     },
     {
         vocabulary: 'adjust',
-        spellingByTense: {
-            verb: {
+        spellingByTense: [
+            {
+                type: 'verb',
                 spelling: 'adjust',
                 meaning: '調整;適應'
             },
-            noun: {
+            {
+                type: 'noun',
                 spelling: 'adjustments',
                 meaning: '調整'
             }
-        },
+        ],
         synonymList: [
             {
-                meaning: '',
+                type: 'noun',
+                meaning: '修訂',
                 spelling: 'revision'
             },
             {
-                meaning: '',
+                type: 'noun',
+                meaning: '修改',
                 spelling: 'modification'
             },
             {
-                meaning: '',
+                type: 'noun',
+                meaning: '適應',
                 spelling: 'adaptation'
             }
         ],
@@ -38,31 +44,36 @@ const LETTER_START_A = [
     },
     {
         vocabulary: 'accomplish',
-        spellingByTense: {
-            verb: {
+        spellingByTense: [
+            {
+                type: 'verb',
                 spelling: 'accomplish',
                 meaning: '完成;辦到;達成'
             },
-            noun: {
+            {
+                type: 'noun',
                 spelling: 'accomplishment',
                 meaning: '成就'
             },
-            adjective: {
+            {
+                type: 'adjective',
                 spelling: 'accomplished',
                 meaning: '完成的'
             }
-        },
+        ],
         synonymList: [
             {
-                meaning: '',
-                spelling: 'achieve'
+                type: 'verb',
+                spelling: 'achieve',
+                meaning: '達到, 辦到'
             },
             {
-                meaning: '',
-                spelling: 'accomplish'
+                type: 'verb',
+                spelling: 'accomplish',
+                meaning: '完成, 辦到, 達成'
             }
         ],
-        exampleSentences: [],
+        exampleSentences: [''],
         grammarNote: ['accomplished by'],
     }
 ]

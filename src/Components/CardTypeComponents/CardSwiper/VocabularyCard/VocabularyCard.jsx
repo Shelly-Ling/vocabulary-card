@@ -1,6 +1,5 @@
 import { useState } from "react"
-import "./VocabularyCard.scss"
-import FlipSection from ".././FlipSection/FlipSection"
+import FlipSection from "../FlipSection/FlipSection"
 
 const ENUM_TENSE_IN_MANDARIN = {
     verb: '動詞',
@@ -10,6 +9,9 @@ const ENUM_TENSE_IN_MANDARIN = {
     preposition: '介系詞'
 }
 
+/**
+ * @description swiper 卡片樣式的單字卡
+ */
 export default function VocabularyCard({
     cardData:{
         vocabulary = null,

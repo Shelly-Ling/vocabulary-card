@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/_reset.scss';
+import './AppContainer/VocabularyApp.scss'
 // import UploadVocabularyApp from './AppContainer/UploadVocabularyApp';
-import BaseVocabularyApp from './AppContainer/BaseVocabularyApp';
+// import BaseVocabularyApp from './AppContainer/BaseVocabularyApp';
+import BookTypeVocabularyApp from './AppContainer/BookTypeVocabularyApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <UploadVocabularyApp /> */}
-    <BaseVocabularyApp />
+    {/* <BaseVocabularyApp /> */}
+    <BookTypeVocabularyApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
