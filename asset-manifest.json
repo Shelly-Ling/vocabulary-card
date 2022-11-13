@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/vocabulary-card/static/css/main.8207a7d8.css",
+    "main.js": "/vocabulary-card/static/js/main.1a45b440.js",
+    "static/js/787.b6b1ea87.chunk.js": "/vocabulary-card/static/js/787.b6b1ea87.chunk.js",
+    "static/media/notebook_1920.png": "/vocabulary-card/static/media/notebook_1920.69cab8fee21fbabc4d52.png",
+    "static/media/notebook_640.png": "/vocabulary-card/static/media/notebook_640.85cc840dd407284f39e5.png",
+    "index.html": "/vocabulary-card/index.html",
+    "main.8207a7d8.css.map": "/vocabulary-card/static/css/main.8207a7d8.css.map",
+    "main.1a45b440.js.map": "/vocabulary-card/static/js/main.1a45b440.js.map",
+    "787.b6b1ea87.chunk.js.map": "/vocabulary-card/static/js/787.b6b1ea87.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8207a7d8.css",
+    "static/js/main.1a45b440.js"
+  ]
+}
