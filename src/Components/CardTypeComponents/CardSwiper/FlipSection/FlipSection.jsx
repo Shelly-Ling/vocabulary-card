@@ -26,11 +26,11 @@ function FlipSection ({
                     style={showAnswer ? {backgroundColor: "#F2FCF6"} : {}}
                 >
                     {
-                        <div className="white-space-nowrap p-5 p-bottom-10">{title}</div>
+                        <div className="white-space-nowrap p-5 pt-10">{title}</div>
                     }
                     {
                         showAnswer && (                        
-                            <div className="p-bottom-10"
+                            <div className="pt-10"
                                 style={childrenStyle}
                             >{children}</div> 
                         )

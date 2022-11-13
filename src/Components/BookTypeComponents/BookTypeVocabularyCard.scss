@@ -88,31 +88,54 @@
         }
     }
     //筆記內容
-    .note-text {
+    .right-section {
         padding-left: 5px;
         max-height: 95%;
-        overflow-y: auto;
-        overflow-x: hidden;
 
-        .main-word {
+        .note-head {
             font-size: 24px;
             color: #c13535ff;
             background-color: #e1e1e1;
-            text-align: center;
             padding: 10px;
             margin-bottom: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .note-body {
+            width: 98%;
+            height: calc(100% - 113px);
+            overflow-y: scroll;
+            overflow-x: hidden;
+            border: 3px dotted #e1e1e1;
+        }
+        .phonetic {
+            font-size: 20px;
+            height: 20px;
+            color: #555555;
+        }
+        audio {
+            height: 25px;
+            border-radius: 10px;
         }
         .note-title {
             padding: 7px 0;
         }
-        p {
+        .note-text {
             background-color: pink;
             font-size: 14px;
             text-align: center;
             margin-bottom: 10px;
         }
+        .note-text-small {
+            color: #000000;
+            font-size: 14px;
+            text-align: center;
+            height: 25px;
+        }
         .session-bottom-line {
-            padding-bottom: 20px;
+            padding: 10px 0;
             border-bottom: 2px solid #e1e1e1;
             &:last-child {
                 border-bottom: 0;
@@ -122,11 +145,46 @@
             background-color: rgb(255, 240, 142);
             font-size: 18px;
             color: #c13535ff;
-            padding: 5px 0;
-            margin: 15px 0 15px 0;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .part-of-speech {
+            background-color: rgb(140, 216, 216);
+            font-size: 18px;
+            padding: 5px;
+            margin: 10px 0;
         }
         .grammar-note {
             margin-top: 15px;
+        }
+        // 辭典說明
+        .dictionary-section {
+            p {
+                margin-bottom: 10px;
+            }
+        }
+        .definition {
+            background-color: #9ee8e87b;
+            padding: 5px;
+        }
+        .synonym-list,
+        .antonyms-list {
+            p {
+                margin: 0 5px 5px;
+                padding: 5px;
+                display: inline-block;
+                border-radius: 6px;
+            }
+        }
+        .synonym-list {
+            p:not(:first-child) {
+                background-color: #ffc7c7;
+            }
+        }
+        .antonyms-list {
+            p:not(:first-child) {
+                background-color: #8ecfee;
+            }
         }
     }
 }
