@@ -279,6 +279,9 @@ function BookTypeVocabularyCard({
                                     )
                                 )
                             }
+                            {/* {
+                                <div className="note-text text-center mt-20">------筆記終止線------</div>
+                            } */}
                         </div>                   
                     </div>
                     <div className={`page-btns ${(currentWordDataIndex === 0 && 'justify-content-end') ||(currentWordDataIndex === vocabularyData.length - 1 && 'justify-content-start')}`}>
